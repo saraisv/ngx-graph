@@ -1,8 +1,5 @@
 <div class="wrapper-node animate__animated animate__bounceIn">
     <div class="node-template">
-        <!-- <div class="node-template-header">
-            {{dataIn?.data?.title}} ({{dataIn?.label}})
-        </div> -->
         <div class="node-template-body">
             <div *ngIf="dataIn?.data?.img">
                 <img [src]="dataIn?.data?.img" width="100px" height="100px" alt="">
@@ -10,7 +7,7 @@
             <div [innerHTML]="dataIn?.data?.text"></div>
             <div *ngIf="dataIn?.action" class="node-button">
                 <button (click)="addNode(dataIn?.id)">
-                    AGREGAR NODO <i class="uil uil-angle-right-b"></i></button>
+                    AGREGAR <i class="uil uil-angle-right-b"></i></button>
             </div>
         </div>
     </div>

@@ -5,7 +5,6 @@
 }
 
 .node-template {
-    /* background-color: rgba(255, 255, 255, .12); */
     border-radius: var(--border-radius);
     min-height: 330px;
     color: var(--text-color-1);
@@ -14,9 +13,8 @@
     width: 100%;
     margin: .5rem;
     display: flex;
-    /* box-shadow: 0 0 8px 2px #0000006b; */
     flex-direction: column;
-    justify-content: end;
+    justify-content: center;
 }
 
 .node-template .node-template-header {
@@ -27,7 +25,6 @@
 .node-template .node-template-body {
     margin: .25rem;
     font-weight: 500;
-    /* background-color: var(--color-1); */
     padding: .5rem;
     color: var(--color-1);
     border-radius: var(--border-radius);

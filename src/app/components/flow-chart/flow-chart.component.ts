@@ -1,7 +1,8 @@
-import { FlowChartService } from './../../services/flow-chart.service';
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnInit, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit, ViewChild } from '@angular/core';
 import * as shape from 'd3-shape';
 import { Edge, Graph, GraphComponent, Layout } from '@swimlane/ngx-graph';
+
+import { FlowChartService } from './../../services/flow-chart.service';
 import { DagreNodesOnlyLayout } from 'src/app/services/layout.service';
 import { stepRound } from 'src/app/services/stepRound';
 @Component({
@@ -12,10 +13,10 @@ import { stepRound } from 'src/app/services/stepRound';
 })
 export class FlowChartComponent implements OnInit {
   @ViewChild('myChart') child!: GraphComponent;
-  dimensions: [number, number] = [0, 0];
-  showRender: boolean = false;
-  dataNode: Array<any> = [] //TODO--> tarjetas
-  dataLink: Array<any> = [] //TODO: ---> lineas verdes
+  public dimensions: [number, number] = [0, 0];
+  public showRender: boolean = false;
+  public dataNode: Array<any> = [] //TODO--> tarjetas
+  public dataLink: Array<any> = [] //TODO: ---> lineas verdes
 
   curve = stepRound;
 
@@ -31,7 +32,6 @@ export class FlowChartComponent implements OnInit {
       if ((w) && (h)) {
         this.dimensions = [w, h]
         this.showRender = true;
-
         this.cd.detectChanges()
         this.callAfterLoad()
       }
@@ -46,27 +46,13 @@ export class FlowChartComponent implements OnInit {
 
     this.flowChartService.dataChild$.subscribe(data => {
       if (data) {
-        //console.log('this.dataNode', this.dataNode)
-        //console.log('data nodes', data.nodes)
         this.dataNode = [...data.nodes]
         this.dataLink = [...data.links]
-        //console.log('data childs', this.dataNode)
-
-      }
-    })
-
-    this.flowChartService.dataYoutubers$.subscribe(data => {
-      console.log('....', data);
-
-      if (data) {
-        this.dataNode = [...this.dataNode, ...data.nodes]
-        this.dataLink = [...this.dataLink, ...data.links]
-        console.log('data youtubers', data)
       }
     })
   }
 
-  callAfterLoad(): void {
+  public callAfterLoad(): void {
 
     /* Recalculate Positions of endpoints while moving / dragging, added i as an identifier that it was moved */
 

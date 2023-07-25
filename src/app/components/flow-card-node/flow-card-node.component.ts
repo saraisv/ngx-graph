@@ -9,30 +9,15 @@ import { Component, Input, OnInit } from '@angular/core';
 export class FlowCardNodeComponent implements OnInit {
   @Input() dataIn: any;
   constructor(private flowChartService: FlowChartService) { }
+  ngOnInit(): void {  }
 
-  ngOnInit(): void {
-  }
-
-  callChilds(src: string, action: string): void {
-    switch (action) {
-      case 'youtubers':
-        this.flowChartService.setDataYoutubers(src)
-        break;
-      default:
-        this.flowChartService.setDataFromChild(src)
-        break
-    }
-
-  }
-
-  addNode(srcKey: string): void {
-    //generar models
+  public addNode(srcKey: string): void {
     const newNode = {
-      id: Math.floor(Math.random() * 10),
-      label: 'Nodo4',
+      id: Math.floor(Math.random() * Date.now()).toString(36),
+      label: 'nodo',
       data: {
         title: 'FRIJOLES 🤘',
-        img: 'https://cdn.iconscout.com/icon/free/png-256/javascript-2752148-2284965.png',
+        img: '',
         text: 'Learn one way to build applications with Angular and reuse your code and abilities to build apps for any deployment target. For web, mobile web.'
       },
       action: {
