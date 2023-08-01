@@ -18,7 +18,7 @@ export class FlowCardNodeComponent implements OnInit {
       data: {
         title: 'FRIJOLES 🤘',
         img: '',
-        text: 'Learn one way to build applications with Angular and reuse your code and abilities to build apps for any deployment target. For web, mobile web.'
+        text: 'lorem ipsum.'
       },
       action: {
         more: 'Agregar',
@@ -28,5 +28,4 @@ export class FlowCardNodeComponent implements OnInit {
     }
     this.flowChartService.addChild('flowChart', srcKey, newNode)
   }
-
 }

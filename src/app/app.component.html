@@ -1,5 +1,18 @@
 <div class="app-body pattern-grid-lg bg-custom-white">
-    <div #zoneFlowChart class="flow-chart-wrapper">
-        <app-flow-chart></app-flow-chart>
+    <div class="page-container">
+        <nav class="navbar">
+            <p> Preview workflow</p>
+            <span class="navbar-spacer"></span>
+            <div class="navbar-menu">
+                <div mat-button class="btn">
+                    <img class="svg-button-icon" src="../assets/filter_list.svg" />
+                </div>
+                <p class="text-catalogs-buttons"> Filtrar </p>
+            </div>
+        </nav>
+
+        <div #zoneFlowChart class="flow-chart-wrapper">
+            <app-flow-chart></app-flow-chart>
+        </div>
     </div>
 </div>

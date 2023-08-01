@@ -1,20 +1,15 @@
 .wrapper-node {
     display: inline-flex;
     min-height: 350px;
-    width: 100%;
+    width: auto;
 }
 
 .node-template {
     border-radius: var(--border-radius);
-    min-height: 330px;
     color: var(--text-color-1);
-    padding: 0;
     cursor: pointer;
+    padding: 0;
     width: 100%;
-    margin: .5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .node-template .node-template-header {
@@ -23,15 +18,15 @@
 }
 
 .node-template .node-template-body {
-    margin: .25rem;
-    font-weight: 500;
-    padding: .5rem;
-    color: var(--color-1);
     border-radius: var(--border-radius);
+    color: #000000;
+    font-weight: 500;
+    margin: .25rem;
+    padding: .5rem;
 }
 
 ::ng-deep .graph .edge {
-    stroke: #3CCFA0
+    stroke: #000000;
 }
 
 .node-template-body img {

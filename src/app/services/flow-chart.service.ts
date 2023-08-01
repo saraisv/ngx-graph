@@ -17,8 +17,8 @@ export class FlowChartService {
         label: 'nodo inicial',
         data: {
           title: 'INICIO',
-          img: 'https://i.imgur.com/Rb27aIA.png',
-          text: 'INICIO'
+          img: '',
+          text: ''
         },
         action: {
           more: 'Agregar',
